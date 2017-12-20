@@ -1,4 +1,17 @@
-<div  class ="message">
-{{message.message}}{{message.messageID}}
+<div class="message">
+  <div *ngIf="!edit">
+    {{message.message}}
+
+      <button type="button" (click)="editing()" class="btn btn-success">Edit</button>
+
+  </div>
+
+
+  <div *ngIf="edit">
+    {{message.message}} <!-- remove when update works -->
+    <!-- <input type="text" value="{{message.message}}" #input (keyup.enter)="update(input.value)" />
+    <button type="button" (click)="update(input.value)" class="btn btn-success">Update</button> -->
+    <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
+  </div>
 
 </div>

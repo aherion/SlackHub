@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../model/message';
 import { ChatService } from '../service/chat-service';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-active-chat',
@@ -11,9 +11,8 @@ import {Observable} from 'rxjs';
 export class ActiveChatComponent implements OnInit {
   public windowTitle = 'Active Chat Window';
 
-  private messages:Observable<Message>;
+  private messages: Observable<any>;
 
-  public messagesArray: Message[]= [];
 
 
   constructor(private _chatService: ChatService) { }
@@ -22,7 +21,7 @@ export class ActiveChatComponent implements OnInit {
     this.getMessages();
   }
 
-  getMessages(){
+  getMessages() {
     this.messages = this._chatService.getMessages();
   }
 

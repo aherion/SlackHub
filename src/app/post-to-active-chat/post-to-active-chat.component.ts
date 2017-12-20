@@ -1,9 +1,9 @@
-import { Component, OnInit , Input } from '@angular/core';
-import {ChatService} from '../service/chat-service';
-import {Message} from '../model/message';
+import { Component, OnInit, Input } from '@angular/core';
+import { ChatService } from '../service/chat-service';
+import { Message } from '../model/message';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import {Http,Response} from '@angular/http';
+import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-post-to-active-chat',
@@ -16,6 +16,6 @@ export class PostToActiveChatComponent {
 
   onClick(input: any): void {
     this._chatService.addMessage(input.value);
-    input.value="";
+    input.value = "";
   }
 }
