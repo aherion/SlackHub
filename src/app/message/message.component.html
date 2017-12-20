@@ -8,9 +8,9 @@
 
 
   <div *ngIf="edit">
-    {{message.message}} <!-- remove when update works -->
-    <!-- <input type="text" value="{{message.message}}" #input (keyup.enter)="update(input.value)" />
-    <button type="button" (click)="update(input.value)" class="btn btn-success">Update</button> -->
+    <!-- remove when update works -->
+    <input type="text" value="{{message.message}}" #input (keyup.enter)="update(input.value)" />
+    <button type="button" (click)="update(input.value)" class="btn btn-success">Update</button>
     <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
   </div>
 

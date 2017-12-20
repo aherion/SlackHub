@@ -22,7 +22,7 @@ export class MessageComponent implements OnInit {
   delete(): void {
     this._chatService.deleteMessage(this.message.messageID);
   }
-  update(newMessage: any): void {
+  update(newMessage: string): void {
     console.log(this.message.messageID)
     this._chatService.updateMessage(this.message.messageID, newMessage);
     this.editing();
