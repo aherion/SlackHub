@@ -31,7 +31,6 @@ export class ChatService {
   }
 
   updateMessage(messageID: number, newMessage: string) {
-    this.http.put(this.uri, messageID, newMessage);
-    this.getMessages();
+    this.http.put(this.uri+messageID, newMessage).subscribe();
   }
 }

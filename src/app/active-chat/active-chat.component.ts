@@ -18,7 +18,8 @@ export class ActiveChatComponent implements OnInit {
   constructor(private _chatService: ChatService) { }
 
   ngOnInit(): void {
-    this.getMessages();
+    setInterval(
+    this.getMessages(),500);
   }
 
   getMessages() {
