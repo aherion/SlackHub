@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../model/message';
 import { ChatService } from '../service/chat-service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-active-chat',
@@ -8,17 +9,21 @@ import { ChatService } from '../service/chat-service';
   styleUrls: ['./active-chat.component.css']
 })
 export class ActiveChatComponent implements OnInit {
-
   public windowTitle = 'Active Chat Window';
-  public messages: Message[]= [];
+
+  private messages:Observable<Message>;
+
+  public messagesArray: Message[]= [];
 
 
   constructor(private _chatService: ChatService) { }
 
   ngOnInit(): void {
-  this._chatService.getMessages().subscribe(data => {
-    this.messages = data;
-  });
+    this.getMessages();
+  }
+
+  getMessages(){
+    this.messages = this._chatService.getMessages();
   }
 
 }

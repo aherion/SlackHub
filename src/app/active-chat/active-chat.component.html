@@ -9,9 +9,9 @@
     <tr>
     </thead>
     <tbody>
-    <tr  *ngFor="let m of messages">
-      {{m.message}}{{m.messageID}}{{m.timestamp}}
-    </tr>
+    <div  *ngFor="let message of messages|async">
+      <app-message class="messagecontent" [message] = message></app-message>
+    </div>
     </tbody>
   </table>
 </div>
