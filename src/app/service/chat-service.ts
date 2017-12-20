@@ -11,8 +11,6 @@ import 'rxjs/add/operator/map';
 export class ChatService {
   private uri = 'http://localhost:8080/chat/messages';
 
-  private ourObservable: Observable<any>;
-
   constructor(private http: Http) {
 
   }

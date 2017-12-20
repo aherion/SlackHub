@@ -7,6 +7,7 @@ import { ActiveChatComponent } from './active-chat/active-chat.component';
 import { ActiveUserComponent } from './active-user/active-user.component';
 import { PostToActiveChatComponent } from './post-to-active-chat/post-to-active-chat.component';
 import { HttpModule } from '@angular/http';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HttpModule } from '@angular/http';
     AppComponent,
     ActiveChatComponent,
     ActiveUserComponent,
-    PostToActiveChatComponent
+    PostToActiveChatComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
